@@ -1,18 +1,14 @@
 import "./App.css";
-import { Greets } from "./components/Greets";
-import { Heading } from "./components/Heading";
-import { Oscar } from "./components/Oscar";
-import { Status } from "./components/STatus";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
 
 function App() {
   return (
     <div className="App">
-      <Status status="loading" />
-      <Heading>Place Holder Text</Heading>
-      <Oscar>
-        <Heading>Oscar goes to leonardo Di Caprio</Heading>
-      </Oscar>
-      <Greets name="Mahedi Hasan" isLoggedIn={true} />
+      <Button
+        handleClick={(event, id) => console.log("event type", event, id)}
+      />
+      <Input value="dsf" handleChange={(e) => console.log(e.target.value)} />
     </div>
   );
 }
